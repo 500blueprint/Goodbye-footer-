@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Moonlight Designs Goodbye Footer</title>
+<title>Moonlight Designs Goodbye</title>
 
 <style>
 
-/* ================================
-   BASIC RESET
-================================ */
+/* ==========================================
+   🌙 RESET
+========================================== */
 
 * {
   box-sizing: border-box;
@@ -25,70 +23,79 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  overflow-x: hidden;
   font-family: Arial, Helvetica, sans-serif;
-  background: #080b20;
+  background: #070b24;
 }
 
 
-/* ================================
-   🌙 MAIN FOOTER
-================================ */
+/* ==========================================
+   🌙 GOODBYE FOOTER
+========================================== */
 
-.footer {
+.goodbye {
+
   position: relative;
 
   width: 100%;
-  min-height: 700px;
+  min-height: 620px;
 
   overflow: hidden;
-
-  padding: 55px 20px 30px;
 
   text-align: center;
 
   color: white;
 
+  padding:
+    45px
+    15px
+    25px;
+
   background:
+
     radial-gradient(
       circle at 50% 10%,
-      rgba(177, 128, 255, 0.35),
-      transparent 35%
+      rgba(164,118,255,.30),
+      transparent 32%
     ),
 
     radial-gradient(
-      circle at 15% 65%,
-      rgba(79, 148, 255, 0.20),
+      circle at 15% 70%,
+      rgba(73,140,255,.18),
       transparent 30%
     ),
 
     radial-gradient(
-      circle at 85% 65%,
-      rgba(188, 100, 255, 0.18),
+      circle at 85% 70%,
+      rgba(190,90,255,.15),
       transparent 30%
     ),
 
     linear-gradient(
       180deg,
-      #111b43 0%,
-      #171540 50%,
-      #070b21 100%
+      #11183d 0%,
+      #13113b 50%,
+      #070b24 100%
     );
 }
 
 
-/* ================================
-   ✨ BACKGROUND STARS
-================================ */
+/* ==========================================
+   ✨ STATIC STAR FIELD
+========================================== */
 
-.star-background {
+.starfield {
+
   position: absolute;
+
   inset: 0;
 
   pointer-events: none;
+
+  opacity: .35;
 
   background-image:
 
@@ -98,176 +105,207 @@ body {
     ),
 
     radial-gradient(
-      rgba(210,190,255,.8) 1px,
+      rgba(205,185,255,.9) 1px,
       transparent 1px
     );
 
   background-size:
-    70px 70px,
-    110px 110px;
+    75px 75px,
+    115px 115px;
 
   background-position:
-    0 0,
-    35px 45px;
-
-  opacity: .35;
+    10px 15px,
+    45px 60px;
 }
 
 
-/* ================================
-   🌙 MOON
-================================ */
+/* ==========================================
+   🌙 CRESCENT MOON
+========================================== */
 
 .moon {
+
   position: absolute;
 
-  right: 8%;
-  top: 50px;
+  right: 7%;
+  top: 35px;
 
-  width: 105px;
-  height: 105px;
+  width: 70px;
+  height: 70px;
 
   border-radius: 50%;
 
-  background:
-    radial-gradient(
-      circle at 35% 30%,
-      white,
-      #f2ebff 45%,
-      #c8b4ff 72%,
-      #9c86eb
-    );
+  background: #f6e58d;
 
   box-shadow:
-    0 0 15px white,
-    0 0 40px rgba(210,190,255,.8),
-    0 0 80px rgba(140,170,255,.55);
 
-  animation:
-    moonGlow 3s ease-in-out infinite alternate;
+    0 0 12px white,
+
+    0 0 30px
+    rgba(224,203,255,.8),
+
+    0 0 55px
+    rgba(142,164,255,.5);
 }
 
 
-@keyframes moonGlow {
+.moon::after {
 
-  from {
-    box-shadow:
-      0 0 12px white,
-      0 0 35px rgba(210,190,255,.65);
-  }
+  content: "";
 
-  to {
-    box-shadow:
-      0 0 22px white,
-      0 0 60px rgba(210,190,255,.95),
-      0 0 100px rgba(130,170,255,.65);
-  }
+  position: absolute;
 
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  top: -12px;
+  left: 19px;
+
+  background: #11183d;
 }
 
 
-/* ================================
-   💜 HEADING
-================================ */
+/* ==========================================
+   ✨ TITLE
+========================================== */
 
 .title {
+
   position: relative;
+
   z-index: 5;
 
   margin: 0;
 
+  padding: 0 70px;
+
   font-size:
-    clamp(32px, 6vw, 55px);
+    clamp(27px, 5vw, 48px);
 
   font-weight: 900;
 
   text-shadow:
-    0 0 8px rgba(255,255,255,.55),
-    0 0 20px rgba(190,145,255,.65);
+
+    0 0 8px
+    rgba(255,255,255,.5),
+
+    0 0 18px
+    rgba(187,145,255,.55);
 }
 
 
-.message {
+.subtitle {
+
   position: relative;
+
   z-index: 5;
 
-  max-width: 650px;
+  max-width: 600px;
 
   margin:
-    12px auto 35px;
+    12px auto 25px;
+
+  padding: 0 20px;
 
   font-size:
-    clamp(15px, 3vw, 19px);
+    clamp(14px, 2.5vw, 18px);
 
-  line-height: 1.6;
+  line-height: 1.5;
 
-  color: #e8e1ff;
+  color: #e7e0ff;
 }
 
 
-/* ================================
-   🦉🐈‍⬛ CHARACTERS
-================================ */
+/* ==========================================
+   🦉🐈‍⬛ CHARACTER AREA
+========================================== */
 
 .characters {
+
   position: relative;
-  z-index: 5;
 
-  width: 100%;
-  max-width: 900px;
-
-  margin:
-    100px auto 20px;
+  z-index: 10;
 
   display: flex;
 
-  justify-content: center;
   align-items: flex-end;
+  justify-content: center;
 
   gap:
-    clamp(20px, 7vw, 90px);
+    clamp(15px, 7vw, 80px);
+
+  width: 100%;
+
+  max-width: 850px;
+
+  margin:
+    80px auto 20px;
 }
 
 
 .character {
+
   position: relative;
 
   width:
-    min(300px, 40vw);
+    min(280px, 40vw);
 }
 
 
-.character img {
+/* ==========================================
+   CHARACTER IMAGES
+========================================== */
+
+.character-image {
+
   display: block;
 
   width: 100%;
+
+  max-width: 280px;
+
   height: auto;
+
+  margin: 0 auto;
+
+  border: 0;
+
+  outline: 0;
+
+  background: transparent;
+
+  object-fit: contain;
 
   transform-origin:
     center bottom;
 
   filter:
+
     drop-shadow(
-      0 0 7px rgba(255,255,255,.45)
+      0 0 6px
+      rgba(255,255,255,.45)
     )
 
     drop-shadow(
-      0 0 17px rgba(185,140,255,.55)
-    )
-
-    drop-shadow(
-      0 0 28px rgba(90,160,255,.35)
+      0 0 15px
+      rgba(180,135,255,.55)
     );
 }
 
 
-/* ================================
-   🦉 STELLA WAVE
-================================ */
+/* ==========================================
+   🦉 STELLA
+========================================== */
 
-.stella img {
+.stella .character-image {
+
   animation:
-    stellaWave 2.1s ease-in-out infinite;
+    stellaWave
+    2.2s
+    ease-in-out
+    infinite;
 }
 
 
@@ -275,39 +313,51 @@ body {
 
   0%,
   100% {
+
     transform:
       translateY(0)
       rotate(-2deg);
+
   }
 
   25% {
+
     transform:
-      translateY(-8px)
+      translateY(-6px)
       rotate(3deg);
+
   }
 
   50% {
+
     transform:
       translateY(0)
       rotate(-1deg);
+
   }
 
   75% {
+
     transform:
       translateY(-5px)
-      rotate(4deg);
+      rotate(3deg);
+
   }
 
 }
 
 
-/* ================================
-   🐈‍⬛ LUNA WAVE
-================================ */
+/* ==========================================
+   🐈‍⬛ LUNA
+========================================== */
 
-.luna img {
+.luna .character-image {
+
   animation:
-    lunaWave 2.5s ease-in-out infinite;
+    lunaWave
+    2.6s
+    ease-in-out
+    infinite;
 }
 
 
@@ -315,90 +365,110 @@ body {
 
   0%,
   100% {
+
     transform:
       translateY(0)
       rotate(2deg);
+
   }
 
   25% {
+
     transform:
       translateY(-6px)
       rotate(-3deg);
+
   }
 
   50% {
+
     transform:
-      translateY(-2px)
-      rotate(2deg);
+      translateY(0)
+      rotate(1deg);
+
   }
 
   75% {
+
     transform:
-      translateY(-8px)
-      rotate(-4deg);
+      translateY(-7px)
+      rotate(-3deg);
+
   }
 
 }
 
 
-/* ================================
+/* ==========================================
    💬 SPEECH BUBBLES
-================================ */
+========================================== */
 
 .bubble {
+
   position: absolute;
 
-  z-index: 10;
+  z-index: 20;
 
-  top: -28px;
+  top: -25px;
   left: 50%;
 
   transform:
     translate(-50%, -100%);
 
-  min-width: 170px;
+  width: max-content;
+
+  max-width: 180px;
 
   padding:
-    12px 16px;
+    10px
+    14px;
 
-  border-radius: 20px;
-
-  color: #28164e;
+  border-radius: 18px;
 
   background: white;
 
-  font-size: 14px;
+  color: #251549;
+
+  font-size: 13px;
 
   font-weight: 800;
 
   box-shadow:
-    0 0 12px rgba(255,255,255,.6),
-    0 0 25px rgba(190,150,255,.6);
+
+    0 0 10px
+    rgba(255,255,255,.6),
+
+    0 0 22px
+    rgba(185,140,255,.55);
 
   animation:
-    bubbleFloat 2.5s ease-in-out infinite;
+    bubbleFloat
+    2.5s
+    ease-in-out
+    infinite;
 }
 
 
 .bubble::after {
+
   content: "";
 
   position: absolute;
 
-  bottom: -10px;
+  bottom: -9px;
   left: 50%;
 
   transform:
     translateX(-50%);
 
   border-left:
-    10px solid transparent;
+    9px solid transparent;
 
   border-right:
-    10px solid transparent;
+    9px solid transparent;
 
   border-top:
-    11px solid white;
+    10px solid white;
 }
 
 
@@ -406,251 +476,235 @@ body {
 
   0%,
   100% {
+
     transform:
       translate(-50%, -100%)
       translateY(0);
+
   }
 
   50% {
+
     transform:
       translate(-50%, -100%)
-      translateY(-6px);
+      translateY(-5px);
+
   }
 
 }
 
 
-/* ================================
+/* ==========================================
    ✨ FALLING MAGIC
-================================ */
+========================================== */
 
 .magic {
+
   position: absolute;
 
-  top: -30px;
+  z-index: 3;
 
-  z-index: 2;
+  top: -25px;
 
   pointer-events: none;
 
   color: white;
 
   text-shadow:
+
     0 0 5px white,
-    0 0 12px #d7baff,
-    0 0 20px #9ccfff;
+
+    0 0 12px #cdb4ff,
+
+    0 0 18px #8fc8ff;
 
   animation:
-    falling linear forwards;
+    fall linear forwards;
 }
 
 
-@keyframes falling {
+@keyframes fall {
 
   0% {
+
     transform:
-      translateY(-30px)
+      translateY(-25px)
       rotate(0deg);
 
     opacity: 0;
+
   }
 
-  10% {
+  12% {
     opacity: .9;
   }
 
   85% {
-    opacity: .8;
+    opacity: .7;
   }
 
   100% {
+
     transform:
-      translateY(750px)
+      translateY(680px)
       rotate(200deg);
 
     opacity: 0;
+
   }
 
 }
 
 
-/* ================================
-   ✨ LITTLE SPARKLES
-================================ */
+/* ==========================================
+   🌙 LINKS
+========================================== */
 
-.sparkle {
-  position: absolute;
+.footer-links {
 
-  z-index: 4;
-
-  pointer-events: none;
-
-  color: white;
-
-  text-shadow:
-    0 0 7px white,
-    0 0 15px #c7a9ff;
-
-  animation:
-    twinkle 1.5s ease-in-out infinite alternate;
-}
-
-
-.s1 {
-  left: 12%;
-  top: 42%;
-}
-
-
-.s2 {
-  right: 12%;
-  top: 48%;
-
-  animation-delay: .5s;
-}
-
-
-.s3 {
-  left: 49%;
-  top: 55%;
-
-  animation-delay: 1s;
-}
-
-
-@keyframes twinkle {
-
-  from {
-    opacity: .25;
-
-    transform:
-      scale(.7)
-      rotate(0deg);
-  }
-
-  to {
-    opacity: 1;
-
-    transform:
-      scale(1.4)
-      rotate(30deg);
-  }
-
-}
-
-
-/* ================================
-   🌙 FOOTER LINKS
-================================ */
-
-.links {
   position: relative;
-  z-index: 5;
+
+  z-index: 10;
 
   display: flex;
 
   justify-content: center;
+
   flex-wrap: wrap;
 
   gap:
-    12px 25px;
+    10px
+    24px;
 
   margin:
-    35px auto 20px;
+    30px auto 15px;
 }
 
 
-.links a {
-  color: #ded5ff;
+.footer-links a {
+
+  color: #ddd4ff;
 
   text-decoration: none;
 
   font-size: 14px;
 
   font-weight: 700;
-
-  transition: .25s;
 }
 
 
-.links a:hover {
+.footer-links a:hover {
+
   color: white;
 
   text-shadow:
-    0 0 8px white,
-    0 0 15px #c2a2ff;
+    0 0 8px #c5a6ff;
 }
 
 
-/* ================================
+/* ==========================================
    COPYRIGHT
-================================ */
+========================================== */
 
 .copyright {
-  position: relative;
-  z-index: 5;
 
-  margin-top: 20px;
+  position: relative;
+
+  z-index: 10;
+
+  margin-top: 15px;
 
   font-size: 12px;
 
-  line-height: 1.7;
+  line-height: 1.6;
 
   color:
     rgba(255,255,255,.6);
 }
 
 
-/* ================================
-   📱 MOBILE
-================================ */
+/* ==========================================
+   📱 PHONE
+========================================== */
 
 @media (max-width: 600px) {
 
-  .footer {
-    min-height: 610px;
+  .goodbye {
+
+    min-height: 560px;
 
     padding:
-      40px 10px 25px;
+      35px
+      8px
+      20px;
+
   }
 
 
   .moon {
-    width: 70px;
-    height: 70px;
+
+    width: 48px;
+    height: 48px;
 
     right: 4%;
     top: 25px;
+
+  }
+
+
+  .moon::after {
+
+    width: 48px;
+    height: 48px;
+
+    top: -8px;
+    left: 14px;
+
+  }
+
+
+  .title {
+
+    padding:
+      0
+      45px;
+
   }
 
 
   .characters {
-    margin-top: 95px;
 
-    gap: 10px;
+    margin-top: 85px;
+
+    gap: 8px;
+
   }
 
 
   .character {
+
     width: 44vw;
+
+  }
+
+
+  .character-image {
+
+    max-width: 210px;
+
   }
 
 
   .bubble {
-    min-width: 125px;
 
-    max-width: 145px;
+    max-width: 135px;
 
     padding:
-      9px 10px;
+      8px
+      9px;
 
-    font-size: 11px;
-  }
+    font-size: 10px;
 
-
-  .links {
-    gap:
-      10px 17px;
   }
 
 }
@@ -663,82 +717,93 @@ body {
 <body>
 
 
-<footer class="footer">
-
-  <!-- STARRY BACKGROUND -->
-
-  <div class="star-background"></div>
+<footer class="goodbye">
 
 
-  <!-- MOON -->
+  <!-- ✨ STARS -->
+
+  <div class="starfield"></div>
+
+
+  <!-- 🌙 MOON -->
 
   <div class="moon"></div>
 
 
-  <!-- SPARKLES -->
 
-  <div class="sparkle s1">
-    ✦
-  </div>
-
-  <div class="sparkle s2">
-    ✧
-  </div>
-
-  <div class="sparkle s3">
-    ✦
-  </div>
-
-
-  <!-- TITLE -->
+  <!-- 💜 MESSAGE -->
 
   <h1 class="title">
+
     Thanks for stopping by! ✨
+
   </h1>
 
 
-  <p class="message">
+  <p class="subtitle">
 
     Come back soon — there's always
     more magic being made at
-    Moonlight Designs. 🌙
+    Moonlight Designs.
 
   </p>
 
 
 
-  <!-- CHARACTERS -->
+  <!-- 🦉🐈‍⬛ CHARACTERS -->
 
   <div class="characters">
 
 
-    <!-- 🦉 STELLA -->
+    <!-- STELLA -->
 
     <div class="character stella">
 
+
       <div class="bubble">
+
         Thanks for visiting! ✨
+
       </div>
 
+
       <img
-        src="./Stella2.PNG"
-        alt="Stella">
+
+        class="character-image"
+
+        src="https://500blueprint.github.io/Goodbye-footer-/Stella2.PNG"
+
+        alt="Stella"
+
+      >
+
 
     </div>
 
 
 
-    <!-- 🐈‍⬛ LUNA -->
+    <!-- LUNA -->
 
     <div class="character luna">
 
+
       <div class="bubble">
+
         Come back soon! 🌙
+
       </div>
 
+
       <img
-        src="./Luna2.PNG"
-        alt="Luna">
+
+        class="character-image"
+
+        src="https://500blueprint.github.io/Goodbye-footer-/Luna2.PNG"
+
+        alt="Luna"
+
+      >
+
 
     </div>
 
@@ -747,27 +812,37 @@ body {
 
 
 
-  <!-- LINKS -->
+  <!-- 🌙 LINKS -->
 
-  <div class="links">
+  <div class="footer-links">
+
 
     <a
       href="https://payhip.com/MoonlightDesigns87"
       target="_top">
+
       Home
+
     </a>
+
 
     <a
       href="https://payhip.com/MoonlightDesigns87"
       target="_top">
+
       Shop
+
     </a>
+
 
     <a
       href="https://payhip.com/MoonlightDesigns87/collection/luna-s-freebies"
       target="_top">
+
       Freebies
+
     </a>
+
 
   </div>
 
@@ -797,7 +872,7 @@ body {
 ========================================== */
 
 const footer =
-  document.querySelector(".footer");
+  document.querySelector(".goodbye");
 
 
 const symbols = [
@@ -809,68 +884,93 @@ const symbols = [
 ];
 
 
-function makeMagic() {
+function createMagic() {
 
-  const item =
+  const magic =
     document.createElement("span");
 
 
-  item.className =
+  magic.className =
     "magic";
 
 
-  item.textContent =
+  magic.textContent =
     symbols[
       Math.floor(
-        Math.random() * symbols.length
+        Math.random()
+        *
+        symbols.length
       )
     ];
 
 
-  item.style.left =
-    Math.random() * 100 + "%";
+  magic.style.left =
+    Math.random()
+    *
+    100
+    +
+    "%";
 
 
-  item.style.fontSize =
-    (8 + Math.random() * 14) + "px";
+  magic.style.fontSize =
+    (
+      8
+      +
+      Math.random()
+      *
+      13
+    )
+    +
+    "px";
 
 
-  item.style.animationDuration =
-    (6 + Math.random() * 6) + "s";
+  magic.style.animationDuration =
+    (
+      7
+      +
+      Math.random()
+      *
+      6
+    )
+    +
+    "s";
 
 
-  footer.appendChild(item);
+  footer.appendChild(
+    magic
+  );
 
 
   setTimeout(
+
     function () {
-      item.remove();
+
+      magic.remove();
+
     },
-    13000
+
+    14000
+
   );
 
 }
 
 
-/* Create falling magic */
-
 setInterval(
-  makeMagic,
-  650
+  createMagic,
+  700
 );
 
 
-/* Start some immediately */
-
 for (
   let i = 0;
-  i < 12;
+  i < 10;
   i++
 ) {
 
   setTimeout(
-    makeMagic,
-    i * 150
+    createMagic,
+    i * 170
   );
 
 }
